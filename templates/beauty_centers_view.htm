@@ -1,0 +1,409 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel beauty_centers view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN center_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_center_id}  r-vertical-field" data-fieldname="center_id" data-signal-error-for="center_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="center_id" data-fieldname="center_id" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_center_id}">
+		
+		{BEGIN center_id_label}{$label beauty_centers center_id }{END center_id_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$center_id_value}	</div>
+
+		
+</div>
+
+
+{END center_id_fieldblock}
+											
+{BEGIN name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_name}  r-vertical-field" data-fieldname="name" data-signal-error-for="name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="name" data-fieldname="name" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_name}">
+		
+		{BEGIN name_label}{$label beauty_centers name }{END name_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$name_value}	</div>
+
+		
+</div>
+
+
+{END name_fieldblock}
+											
+{BEGIN description_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_description}  r-vertical-field" data-fieldname="description" data-signal-error-for="description{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="description" data-fieldname="description" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_description}">
+		
+		{BEGIN description_label}{$label beauty_centers description }{END description_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$description_value}	</div>
+
+		
+</div>
+
+
+{END description_fieldblock}
+											
+{BEGIN address_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address}  r-vertical-field" data-fieldname="address" data-signal-error-for="address{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="address" data-fieldname="address" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_address}">
+		
+		{BEGIN address_label}{$label beauty_centers address }{END address_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$address_value}	</div>
+
+		
+</div>
+
+
+{END address_fieldblock}
+											
+{BEGIN city_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_city}  r-vertical-field" data-fieldname="city" data-signal-error-for="city{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="city" data-fieldname="city" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_city}">
+		
+		{BEGIN city_label}{$label beauty_centers city }{END city_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$city_value}	</div>
+
+		
+</div>
+
+
+{END city_fieldblock}
+											
+{BEGIN postal_code_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_postal_code}  r-vertical-field" data-fieldname="postal_code" data-signal-error-for="postal_code{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="postal_code" data-fieldname="postal_code" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_postal_code}">
+		
+		{BEGIN postal_code_label}{$label beauty_centers postal_code }{END postal_code_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$postal_code_value}	</div>
+
+		
+</div>
+
+
+{END postal_code_fieldblock}
+											
+{BEGIN latitude_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_latitude}  r-vertical-field" data-fieldname="latitude" data-signal-error-for="latitude{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="latitude" data-fieldname="latitude" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_latitude}">
+		
+		{BEGIN latitude_label}{$label beauty_centers latitude }{END latitude_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$latitude_value}	</div>
+
+		
+</div>
+
+
+{END latitude_fieldblock}
+											
+{BEGIN longitude_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_longitude}  r-vertical-field" data-fieldname="longitude" data-signal-error-for="longitude{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="longitude" data-fieldname="longitude" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_longitude}">
+		
+		{BEGIN longitude_label}{$label beauty_centers longitude }{END longitude_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$longitude_value}	</div>
+
+		
+</div>
+
+
+{END longitude_fieldblock}
+											
+{BEGIN average_rating_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_average_rating}  r-vertical-field" data-fieldname="average_rating" data-signal-error-for="average_rating{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="average_rating" data-fieldname="average_rating" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_average_rating}">
+		
+		{BEGIN average_rating_label}{$label beauty_centers average_rating }{END average_rating_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$average_rating_value}	</div>
+
+		
+</div>
+
+
+{END average_rating_fieldblock}
+											
+{BEGIN manager_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_manager_id}  r-vertical-field" data-fieldname="manager_id" data-signal-error-for="manager_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="manager_id" data-fieldname="manager_id" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_manager_id}">
+		
+		{BEGIN manager_id_label}{$label beauty_centers manager_id }{END manager_id_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$manager_id_value}	</div>
+
+		
+</div>
+
+
+{END manager_id_fieldblock}
+											
+{BEGIN disponibilite_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_disponibilite}  r-vertical-field" data-fieldname="disponibilite" data-signal-error-for="disponibilite{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="disponibilite" data-fieldname="disponibilite" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_disponibilite}">
+		
+		{BEGIN disponibilite_label}{$label beauty_centers disponibilite }{END disponibilite_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$disponibilite_value}	</div>
+
+		
+</div>
+
+
+{END disponibilite_fieldblock}
+											
+{BEGIN created_at_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_created_at}  r-vertical-field" data-fieldname="created_at" data-signal-error-for="created_at{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="created_at" data-fieldname="created_at" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_created_at}">
+		
+		{BEGIN created_at_label}{$label beauty_centers created_at }{END created_at_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$created_at_value}	</div>
+
+		
+</div>
+
+
+{END created_at_fieldblock}
+											
+{BEGIN updated_at_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_updated_at}  r-vertical-field" data-fieldname="updated_at" data-signal-error-for="updated_at{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="updated_at" data-fieldname="updated_at" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_updated_at}">
+		
+		{BEGIN updated_at_label}{$label beauty_centers updated_at }{END updated_at_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$updated_at_value}	</div>
+
+		
+</div>
+
+
+{END updated_at_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Close window			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="beauty_centers_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Edit		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

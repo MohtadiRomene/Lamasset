@@ -1,0 +1,387 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel reservations add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN user_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_user_id}  r-vertical-field" 
+	data-signal-error-for="user_id{$id}" {$required_attr_user_id}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="user_id" data-fieldname="user_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_user_id}">
+		{BEGIN user_id_label}{$label reservations user_id }{END user_id_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$user_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="user_id" {$tooltipAttr reservations user_id } >
+		<div class="text-muted" >
+		{$tooltip reservations user_id }		</div>
+	</div>
+</div>
+
+
+{END user_id_fieldblock}
+											
+{BEGIN service_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_service_id}  r-vertical-field" 
+	data-signal-error-for="service_id{$id}" {$required_attr_service_id}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="service_id" data-fieldname="service_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_service_id}">
+		{BEGIN service_id_label}{$label reservations service_id }{END service_id_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$service_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="service_id" {$tooltipAttr reservations service_id } >
+		<div class="text-muted" >
+		{$tooltip reservations service_id }		</div>
+	</div>
+</div>
+
+
+{END service_id_fieldblock}
+											
+{BEGIN center_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_center_id}  r-vertical-field" 
+	data-signal-error-for="center_id{$id}" {$required_attr_center_id}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="center_id" data-fieldname="center_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_center_id}">
+		{BEGIN center_id_label}{$label reservations center_id }{END center_id_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$center_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="center_id" {$tooltipAttr reservations center_id } >
+		<div class="text-muted" >
+		{$tooltip reservations center_id }		</div>
+	</div>
+</div>
+
+
+{END center_id_fieldblock}
+											
+{BEGIN reservation_date_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_reservation_date}  r-vertical-field" 
+	data-signal-error-for="reservation_date{$id}" {$required_attr_reservation_date}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="reservation_date" data-fieldname="reservation_date" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_reservation_date}">
+		{BEGIN reservation_date_label}{$label reservations reservation_date }{END reservation_date_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$reservation_date_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="reservation_date" {$tooltipAttr reservations reservation_date } >
+		<div class="text-muted" >
+		{$tooltip reservations reservation_date }		</div>
+	</div>
+</div>
+
+
+{END reservation_date_fieldblock}
+											
+{BEGIN start_time_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_start_time}  r-vertical-field" 
+	data-signal-error-for="start_time{$id}" {$required_attr_start_time}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="start_time" data-fieldname="start_time" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_start_time}">
+		{BEGIN start_time_label}{$label reservations start_time }{END start_time_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$start_time_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="start_time" {$tooltipAttr reservations start_time } >
+		<div class="text-muted" >
+		{$tooltip reservations start_time }		</div>
+	</div>
+</div>
+
+
+{END start_time_fieldblock}
+											
+{BEGIN end_time_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_end_time}  r-vertical-field" 
+	data-signal-error-for="end_time{$id}" {$required_attr_end_time}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="end_time" data-fieldname="end_time" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_end_time}">
+		{BEGIN end_time_label}{$label reservations end_time }{END end_time_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$end_time_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="end_time" {$tooltipAttr reservations end_time } >
+		<div class="text-muted" >
+		{$tooltip reservations end_time }		</div>
+	</div>
+</div>
+
+
+{END end_time_fieldblock}
+											
+{BEGIN status_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_status}  r-vertical-field" 
+	data-signal-error-for="status{$id}" {$required_attr_status}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="status" data-fieldname="status" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_status}">
+		{BEGIN status_label}{$label reservations status }{END status_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$status_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="status" {$tooltipAttr reservations status } >
+		<div class="text-muted" >
+		{$tooltip reservations status }		</div>
+	</div>
+</div>
+
+
+{END status_fieldblock}
+											
+{BEGIN notes_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_notes}  r-vertical-field" 
+	data-signal-error-for="notes{$id}" {$required_attr_notes}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="notes" data-fieldname="notes" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_notes}">
+		{BEGIN notes_label}{$label reservations notes }{END notes_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$notes_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="notes" {$tooltipAttr reservations notes } >
+		<div class="text-muted" >
+		{$tooltip reservations notes }		</div>
+	</div>
+</div>
+
+
+{END notes_fieldblock}
+											
+{BEGIN created_at_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_created_at}  r-vertical-field" 
+	data-signal-error-for="created_at{$id}" {$required_attr_created_at}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="created_at" data-fieldname="created_at" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_created_at}">
+		{BEGIN created_at_label}{$label reservations created_at }{END created_at_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$created_at_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="created_at" {$tooltipAttr reservations created_at } >
+		<div class="text-muted" >
+		{$tooltip reservations created_at }		</div>
+	</div>
+</div>
+
+
+{END created_at_fieldblock}
+											
+{BEGIN updated_at_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_updated_at}  r-vertical-field" 
+	data-signal-error-for="updated_at{$id}" {$required_attr_updated_at}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="updated_at" data-fieldname="updated_at" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_updated_at}">
+		{BEGIN updated_at_label}{$label reservations updated_at }{END updated_at_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$updated_at_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="updated_at" {$tooltipAttr reservations updated_at } >
+		<div class="text-muted" >
+		{$tooltip reservations updated_at }		</div>
+	</div>
+</div>
+
+
+{END updated_at_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
