@@ -146,11 +146,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: const Text('Connexion'),
             ),
             const SizedBox(height: 10),
-            ElevatedButton(
+            ElevatedButton.icon(
               onPressed: () {
                 Navigator.pushNamed(context, AppRoutes.managerLogin);
               },
-              child: const Text('Connexion Manager'),
+              icon: const Icon(Icons.lock),
+              label: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('Connexion Manager'),
+                ],
+              ),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, AppRoutes.managerLogin);
+              },
+              icon: const Icon(Icons.admin_panel_settings),
+              label: const Text('Connexion Admin'),
             ),
             const SizedBox(height: 10),
             OutlinedButton(
