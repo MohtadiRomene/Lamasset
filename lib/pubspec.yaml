@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: lib
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
@@ -34,10 +35,37 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+=======
+name: salon_app_frontend
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=2.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+  shared_preferences: ^2.3.0
+  url_launcher: ^6.1.7
+  table_calendar: ^3.1.2
+  cupertino_icons: ^1.0.8
+  flutter_map: ^8.1.1
+  latlong2: ^0.9.0
+  logger: ^2.4.0
+  flutter_map_cancellable_tile_provider: ^3.0.2
+  google_fonts: ^6.2.1
+  universal_html: ^2.2.4
+  webview_flutter: ^4.13.0
+>>>>>>> dc94388 (PFE_PROJECT)
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+<<<<<<< HEAD
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -87,3 +115,33 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+=======
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+
+    - assets/logo.png
+    - assets/apple.png
+    - assets/facebook.png
+    - assets/google.png
+    - assets/categories/hair_styling.jpg
+    - assets/categories/nails.jpg
+    - assets/categories/eyebrows_and_eyeslashes.jpg
+    - assets/categories/massage.jpg
+    - assets/categories/barbering.jpg
+    - assets/categories/hair_removal.jpg
+    - assets/categories/facials_and_skincare.jpg
+    - assets/categories/injectables_and_fillers.jpg
+    - assets/categories/body.jpg
+    - assets/categories/makeup.jpg
+    - assets/categories/medical_and_dental.jpg
+    - assets/categories/fitness.jpg
+    - assets/spa_dar_el_jeld.jpg
+    - assets/themes_marins_carthage.jpg
+    - assets/fedra_beautyland.jpg
+    - assets/roland_salon.jpg
+    - assets/hasdrubal_thalassa.jpg
+    - assets/algotherm_alkantara.jpg
+>>>>>>> dc94388 (PFE_PROJECT)

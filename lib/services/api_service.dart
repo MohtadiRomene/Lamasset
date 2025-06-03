@@ -3,7 +3,11 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ApiService {
+<<<<<<< HEAD
   static const String baseUrl = 'http://localhost:3001';
+=======
+  static const String baseUrl = 'http://localhost:3000';
+>>>>>>> dc94388 (PFE_PROJECT)
   static String? _token;
 
   static Future<void> init() async {
@@ -85,6 +89,10 @@ class ApiService {
     required String startTime,
     required String endTime,
     required String notes,
+<<<<<<< HEAD
+=======
+    required int userId,  // Added userId parameter here
+>>>>>>> dc94388 (PFE_PROJECT)
   }) async {
     final token = _token ?? '';
     try {
@@ -101,6 +109,10 @@ class ApiService {
           'startTime': startTime,
           'endTime': endTime,
           'notes': notes,
+<<<<<<< HEAD
+=======
+          'userId': userId,  // Include userId in the body
+>>>>>>> dc94388 (PFE_PROJECT)
         }),
       );
 

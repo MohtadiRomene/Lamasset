@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:salon_app_frontend/services/api_service.dart';
 
@@ -12,10 +13,29 @@ class BookingScreenState extends State<BookingScreen> {
   final _apiService = ApiService();
   final _salonIdController = TextEditingController();
   final _serviceIdController = TextEditingController();
+=======
+import 'dart:convert';
+import 'dart:html' as html; 
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+class BookingScreen extends StatefulWidget {
+  const BookingScreen({Key? key}) : super(key: key);
+
+  @override
+  _BookingScreenState createState() => _BookingScreenState();
+}
+
+class _BookingScreenState extends State<BookingScreen> {
+  final _formKey = GlobalKey<FormState>();
+
+  
+>>>>>>> dc94388 (PFE_PROJECT)
   final _dateController = TextEditingController();
   final _startTimeController = TextEditingController();
   final _endTimeController = TextEditingController();
   final _notesController = TextEditingController();
+<<<<<<< HEAD
   bool _isLoading = false;
   String? _errorMessage;
 
@@ -195,16 +215,189 @@ class BookingScreenState extends State<BookingScreen> {
         ),
       ),
     );
+=======
+  final _salonIdController = TextEditingController();
+  final _serviceIdController = TextEditingController();
+
+  String? userId;
+  bool _isLoading = false;
+  String? _errorMessage;
+  String? _successMessage;
+
+  @override
+  void initState() {
+    super.initState();
+    userId = html.window.localStorage['userId'];
+
+    if (userId == null) {
+      _errorMessage = 'Utilisateur non connecté. Veuillez vous connecter.';
+    }
+>>>>>>> dc94388 (PFE_PROJECT)
   }
 
   @override
   void dispose() {
+<<<<<<< HEAD
     _salonIdController.dispose();
     _serviceIdController.dispose();
+=======
+>>>>>>> dc94388 (PFE_PROJECT)
     _dateController.dispose();
     _startTimeController.dispose();
     _endTimeController.dispose();
     _notesController.dispose();
+<<<<<<< HEAD
     super.dispose();
   }
 }
+=======
+    _salonIdController.dispose();
+    _serviceIdController.dispose();
+    super.dispose();
+  }
+Future<void> _submitBooking() async {
+  if (!_formKey.currentState!.validate()) return;
+
+  if (userId == null) {
+    setState(() {
+      _errorMessage = 'Utilisateur non connecté.';
+    });
+    return;
+  }
+
+  setState(() {
+    _isLoading = true;
+    _errorMessage = null;
+    _successMessage = null;
+  });
+
+  final bookingData = {
+    'date': _dateController.text.trim(),
+    'startTime': _startTimeController.text.trim(),
+    'endTime': _endTimeController.text.trim(),
+    'notes': _notesController.text.trim(),
+    'salonId': _salonIdController.text.trim(),
+    'serviceId': _serviceIdController.text.trim(),
+    'user_id': userId!, 
+  };
+
+  
+  debugPrint('Données envoyées: ${jsonEncode(bookingData)}');
+
+  try {
+    final response = await http.post(
+      Uri.parse('http://localhost:3000/api/bookings'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode(bookingData),
+    );
+
+    final data = jsonDecode(response.body);
+
+    if (response.statusCode == 201 && data['success'] == true) {
+      setState(() {
+        _successMessage = 'Réservation réussie !';
+      });
+      _formKey.currentState!.reset();
+    } else {
+      setState(() {
+        _errorMessage = data['message'] ?? 'Erreur lors de la réservation. Code: ${response.statusCode}';
+      });
+    }
+  } catch (e) {
+    setState(() {
+      _errorMessage = 'Erreur réseau : $e';
+    });
+  } finally {
+    setState(() {
+      _isLoading = false;
+    });
+  }
+}
+
+  @override
+  Widget build(BuildContext context) {
+    if (userId == null) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('Réservation')),
+        body: Center(child: Text(_errorMessage ?? 'Erreur inconnue')),
+      );
+    }
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Réservation')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                if (_errorMessage != null)
+                  Text(_errorMessage!, style: const TextStyle(color: Colors.red)),
+                if (_successMessage != null)
+                  Text(_successMessage!, style: const TextStyle(color: Colors.green)),
+                TextFormField(
+                  controller: _dateController,
+                  decoration: const InputDecoration(labelText: 'Date (YYYY-MM-DD)'),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) return 'Entrez une date';
+                    if (!RegExp(r'^\d{4}-\d{2}-\d{2}$').hasMatch(value)) return 'Format date invalide';
+                    return null;
+                  },
+                ),
+                TextFormField(
+                  controller: _startTimeController,
+                  decoration: const InputDecoration(labelText: 'Heure de début (HH:mm)'),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) return 'Entrez une heure de début';
+                    if (!RegExp(r'^([0-1]\d|2[0-3]):([0-5]\d)$').hasMatch(value)) return 'Format heure invalide';
+                    return null;
+                  },
+                ),
+                TextFormField(
+                  controller: _endTimeController,
+                  decoration: const InputDecoration(labelText: 'Heure de fin (HH:mm)'),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) return 'Entrez une heure de fin';
+                    if (!RegExp(r'^([0-1]\d|2[0-3]):([0-5]\d)$').hasMatch(value)) return 'Format heure invalide';
+                    return null;
+                  },
+                ),
+                TextFormField(
+                  controller: _notesController,
+                  decoration: const InputDecoration(labelText: 'Notes (optionnel)'),
+                  maxLines: 2,
+                ),
+                TextFormField(
+                  controller: _salonIdController,
+                  decoration: const InputDecoration(labelText: 'ID du salon'),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) return 'Entrez l\'ID du salon';
+                    if (int.tryParse(value) == null) return 'ID du salon invalide';
+                    return null;
+                  },
+                ),
+                TextFormField(
+                  controller: _serviceIdController,
+                  decoration: const InputDecoration(labelText: 'ID du service'),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) return 'Entrez l\'ID du service';
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 24),
+                _isLoading
+                    ? const CircularProgressIndicator()
+                    : ElevatedButton(
+                        onPressed: _submitBooking,
+                        child: const Text('Réserver'),
+                      ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+>>>>>>> dc94388 (PFE_PROJECT)

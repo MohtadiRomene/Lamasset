@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import '../routes.dart';
 import '../services/api_service.dart';
 import '../constants/colors.dart';
+=======
+import 'package:url_launcher/url_launcher.dart';
+>>>>>>> dc94388 (PFE_PROJECT)
 
 class ManagerLoginPage extends StatefulWidget {
   const ManagerLoginPage({super.key});
@@ -13,6 +17,7 @@ class ManagerLoginPage extends StatefulWidget {
 class _ManagerLoginPageState extends State<ManagerLoginPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+<<<<<<< HEAD
   bool _isLoading = false;
   String? _errorMessage;
 
@@ -50,6 +55,28 @@ class _ManagerLoginPageState extends State<ManagerLoginPage> {
     } else if (mounted) {
       setState(() {
         _errorMessage = 'Veuillez entrer votre email et mot de passe.';
+=======
+  String? _errorMessage;
+
+  void _login() async {
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
+
+    if (email == 'manager@lamasset.com' && password == 'manager123') {
+      // Ouvrir le tableau de bord dans un nouvel onglet
+      final url = Uri.parse('http://localhost/Manager-dashboard/menu.php');
+      if (await canLaunchUrl(url)) {
+        await launchUrl(url, mode: LaunchMode.externalApplication);
+      }
+
+      // Rediriger vers /onboarding dans l'application Flutter
+      if (mounted) {
+        Navigator.pushReplacementNamed(context, '/onboarding');
+      }
+    } else {
+      setState(() {
+        _errorMessage = 'Identifiants incorrects.';
+>>>>>>> dc94388 (PFE_PROJECT)
       });
     }
   }
@@ -57,6 +84,7 @@ class _ManagerLoginPageState extends State<ManagerLoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -153,6 +181,38 @@ class _ManagerLoginPageState extends State<ManagerLoginPage> {
               ],
             ),
           ),
+=======
+      appBar: AppBar(title: const Text('Connexion Manager')),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              controller: _emailController,
+              decoration: const InputDecoration(labelText: 'Email'),
+            ),
+            const SizedBox(height: 10),
+            TextField(
+              controller: _passwordController,
+              obscureText: true,
+              decoration: const InputDecoration(labelText: 'Mot de passe'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: _login,
+              child: const Text('Se connecter'),
+            ),
+            if (_errorMessage != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Text(
+                  _errorMessage!,
+                  style: const TextStyle(color: Colors.red),
+                ),
+              ),
+          ],
+>>>>>>> dc94388 (PFE_PROJECT)
         ),
       ),
     );
@@ -164,4 +224,8 @@ class _ManagerLoginPageState extends State<ManagerLoginPage> {
     _passwordController.dispose();
     super.dispose();
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dc94388 (PFE_PROJECT)

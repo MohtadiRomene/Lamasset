@@ -68,8 +68,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
       if (userData == null) {
         throw Exception('Utilisateur non connecté');
       }
+<<<<<<< HEAD
       // Removed unused 'user' variable
       // final user = jsonDecode(userData);
+=======
+      
+>>>>>>> dc94388 (PFE_PROJECT)
 
       final salon = _beautyCenters.firstWhere((center) => center['name'] == _selectedCenter);
       final salonId = salon['id'];

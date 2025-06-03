@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:salon_app_frontend/screens/booking_screen.dart';
+<<<<<<< HEAD
 // Commentez cette ligne si vous n'avez pas encore ajouté Google Fonts à votre pubspec.yaml
 // import 'package:google_fonts/google_fonts.dart';
 
 final logger = Logger();
 
 // Définition des couleurs et du thème
+=======
+
+
+final logger = Logger();
+
+
+>>>>>>> dc94388 (PFE_PROJECT)
 const Color primaryColor = Color(0xFF6B4E71);
 const Color accentColor = Color(0xFFE57373);
 const Color backgroundColor = Color(0xFFFCE4EC); // Rose pâle conservé
@@ -14,8 +22,12 @@ const Color cardColor = Colors.white;
 const Color textPrimaryColor = Color(0xFF333333);
 const Color textSecondaryColor = Color(0xFF757575);
 
+<<<<<<< HEAD
 // Définition des styles de texte réutilisables
 // Remplacez par ces versions si vous n'avez pas Google Fonts
+=======
+
+>>>>>>> dc94388 (PFE_PROJECT)
 TextStyle get headingStyle => const TextStyle(
       fontSize: 22,
       fontWeight: FontWeight.bold,
@@ -65,7 +77,11 @@ TextStyle get bodyStyle => GoogleFonts.poppins(
     );
 */
 
+<<<<<<< HEAD
 // Définition des classes manquantes (placeholders)
+=======
+
+>>>>>>> dc94388 (PFE_PROJECT)
 class SearchScreen extends StatelessWidget {
   final List<Map<String, String>> recommendedCenters;
   final List<Map<String, String>> newCenters;

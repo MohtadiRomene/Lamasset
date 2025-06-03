@@ -161,7 +161,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             const SizedBox(height: 10),
             ElevatedButton.icon(
               onPressed: () {
+<<<<<<< HEAD
                 Navigator.pushNamed(context, AppRoutes.managerLogin);
+=======
+                Navigator.pushNamed(context, AppRoutes.adminLogin);
+>>>>>>> dc94388 (PFE_PROJECT)
               },
               icon: const Icon(Icons.admin_panel_settings),
               label: const Text('Connexion Admin'),
@@ -208,4 +212,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     _pageController.dispose();
     super.dispose();
   }
+<<<<<<< HEAD
 }
+=======
+}  
+>>>>>>> dc94388 (PFE_PROJECT)
